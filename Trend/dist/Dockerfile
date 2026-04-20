@@ -4,7 +4,7 @@ FROM nginx:alpine
 RUN rm -rf /usr/share/nginx/html/*
 
 # copy dist files
-COPY dist/ /usr/share/nginx/html/
+COPY Trend/dist/ /usr/share/nginx/html/
 
 # change nginx port to 3000
 RUN sed -i 's/80/3000/g' /etc/nginx/conf.d/default.conf
