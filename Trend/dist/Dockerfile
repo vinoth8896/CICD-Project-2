@@ -6,7 +6,7 @@ RUN rm -rf /usr/share/nginx/html/*
 RUN pwd
 
 # copy dist files
-COPY Trend/dist/ /usr/share/nginx/html/
+COPY /Trend/dist/ /usr/share/nginx/html/
 
 # change nginx port to 3000
 RUN sed -i 's/80/3000/g' /etc/nginx/conf.d/default.conf
