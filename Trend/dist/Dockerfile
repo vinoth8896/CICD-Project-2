@@ -3,6 +3,8 @@ FROM nginx:alpine
 # remove default nginx files
 RUN rm -rf /usr/share/nginx/html/*
 
+RUN pwd
+
 # copy dist files
 COPY Trend/dist/ /usr/share/nginx/html/
 
